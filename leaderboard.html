@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard</title>
+  </head>
+  <body>
+    <h1>Leaderboard</h1>
+    <ul id="leaderboardList"></ul>
+
+    <script>
+      const leaderboardList = document.getElementById("leaderboardList");
+      const leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || {};
+
+      for (const username in leaderboard) {
+        const li = document.createElement("li");
+        li.textContent = `${username}: ${leaderboard[username]}`;
+        leaderboardList.appendChild(li);
+      }
+    </script>
+  </body>
+</html>

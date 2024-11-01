@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            padding: 10px 20px;
+        }
+        canvas {
+            display: block;
+            margin: 0 auto;
+            background: #000;
+        }
+        #startScreen, #gameOver, #pauseScreen {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            display: none;
+        }
+        #scoreEl {
+            color: aliceblue;
+            font-family: sans-serif;
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <span>Score:</span> <span id="scoreEl">0</span>
+    </p>
+    <canvas id="canvas"></canvas>
+
+    <div id="startScreen">
+        <h1>Welcome to the Game!</h1>
+        <button id="startButton">Start Game</button>
+    </div>
+    <div id="pauseScreen">
+        <h1>Game Paused</h1>
+        <button id="resumeButton">Resume</button>
+    </div>
+    <div id="gameOver">
+        <h1>Game Over</h1>
+        <button id="restartButton">Restart</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
